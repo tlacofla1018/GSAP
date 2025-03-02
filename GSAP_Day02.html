@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 1일차 - Target(s)</title>
+    
+    <style>
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="ID_box" class="box box01"></div>
+        <div class="box box02"></div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+        // target은 애니메이션으로 만들고자 하는 대상을 말함
+        // GSAP는 document.querySelectorAll()을 사용하기 때문에 css선택자, class, id 또는 변수나 배열을 전달 가능함
+
+        // ID, Class
+        gsap.to("#ID_box", {
+            x:300,
+            duration: 1,
+        });
+        gsap.to(".box01", {
+            x:600,
+            duration: 1,
+            delay: 1.5,
+        });
+
+        // 복합 css 선택자
+        gsap.to("section > div:nth-child(2)", {
+            x:600,
+            duration: 1,
+            delay: 1.5,
+        });
+
+        // 변수
+        let targetBox = document.querySelector(".box01");
+        gsap.to(targetBox, {
+            x: 300,
+            duration: 1,
+            delay: 3,
+        })
+
+        // 배열
+        let targetClassBox01 = document.querySelector(".box01");
+        let targetClassBox02 = document.querySelector(".box02");
+        gsap.to([targetClassBox01,targetClassBox02], {
+            x: 0,
+            duration: 1,
+            delay: 4.5,
+        });
+    </script>
+</body>
