@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 3일차 - Vars, Transform shorthand</title>
+</head>
+<body>
+    
+    <script>
+        // vars 객체는 애니메이션에 적용하려는 임의의 속성과 동작에 영향을 미치는 특수 속성(duration, onComplete, repeat 등)처럼 애니메이션에 대한 모든 정보를 담고 있음
+        // 여기서 GSAP가 애니메이션화 할 수 있는 속성에는 CSS 속정을 비롯해 변수와 문자열 등 거의 모든 것이 해당함
+        // 가장 일반적인 건 transforms과 opacity - 레이아웃에 영항을 주지 않아 좀 더 부드럽게 작동 가능
+        // (따라서 top, left, margin 등의 레이아웃 속성은 가능한 transforms랑 opacity로 구현할 것)
+
+        // GSAP는 transforms의 축약을 제공함
+        // 예를 들면, transform: rotate(360deg) translateX(10px) translateY(50%);를 {rotation: 360, x: 10, yPercent: 50}로 축약할 수 있음
+
+        // Transform shorthand
+        // 기본적으로 px와 deg 단위를 사용하지만 vw, rad 등의 다른 단위부터 js로 계산한 값이나 상대값 등도 이용 가능함
+        // rad은 Radians(라디안)으로 1라디안은 약 57.3도임 (해당하는 CSS없음)
+            // x: 100; -> transform: translateX(100px)
+            // y: 100; -> transform: translateY(100px)
+            // xPercent: 50; -> transform: translateX(50%)
+            // yPercent: 50; -> transform: translateY(50%)
+            // scale: 2; -> transform: scale(2)
+            // scaleX: 2; -> transform: scaleX(2)
+            // scaleY: 2; -> transform: scaleY(2)
+            // rotation: 90; -> transform: rotate(90deg)
+            // rotation: "1.25rad";
+            // skew: 30; -> transform: skew(30deg)
+            // skewX: 30; -> transform: skewX(30deg)
+            // skewY: "1.23rad";
+            // transformOrigin: "center 40%"; -> transform-origin: center 40%
+            // opacity: 0; -> adjust the elements opacity
+            // autoAlpha: 0; -> opacity + visibility
+            // duration: 1; -> animation-duration: 1s
+            // repeat: -1; -> animation-iteration-count: infinite
+            // repeat: 2; -> animation-iteration-count: 2
+            // delay: 2; -> animation-delay: 2
+            // yoyo: true; -> animation-direction: alternate (반복있을 경우, 정방향과 역방향을 번갈아 재생)
+
+            // x: 200, // use default of px
+            // x: "+=200" // relative values
+            // x: '40vw', // or pass in a string with a different unit for GSAP to parse
+            // x: () => window.innerWidth / 2, // you can even use functional values to do a calculation!
+            
+            // rotation: 360 // use default of degrees
+            // rotation: "1.25rad" // use radians
+    </script>
+</body>
+</html>
