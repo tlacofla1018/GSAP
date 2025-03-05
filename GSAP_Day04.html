@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 4일차 - Getting Started 중 first animation 끝</title>
+</head>
+<body>
+    <script>
+        // 거의 모든 것을 애니메이션을 구현할 수 있음
+        // CSS
+            // 속성을 카멜케이스로 변경하는 것에 주의하면 됨
+            // 거의 모든 속성을 구현 가능하지만 되도록 transform, opacity 사용
+            // filter나 boxShadow를 렌더링하기 위해선 어느 정도 CPU가 따라와야 하기 때문
+        // SVG
+            // SVG 속성도 애니메이션으로 구현 가능
+        // 돔이 아닌 변수로 만든 것들도 가능함
+            // let obj = { myNum: 10, myColor: "red" };
+            // gsap.to(obj, {
+            // myNum: 200,
+            // myColor: "blue",
+            // onUpdate: () => console.log(obj.myNum, obj.myColor)
+            // });
+
+        // Tween의 특수 속성 중 많이 쓰이는 것들
+            // duration - 애니메이션 지속시간(초), 기본값은 0.5
+            // delay - 애니메이션 시작 전 지연시간(초)
+            // repeat - 애니메이션 반복횟수, 무한반복은 -1
+            // yoyo - 애니메이션이 정방향, 역방향을 번갈아 실행, 기본값은 false
+            // stagger - 여러 타겟이 제공됐을 때, 각 타겟 애니메이션의 시작 간격(초)
+            // ease - 애니메이션 중 변화 제어(약간 trasition 거는 것과 비슷한 듯 다름)
+            // onComplete - 애니메이션이 완료되면 실행되는 함수
+
+        // repeat
+            // delay 걸 수 있음(repeatDelay)
+            // 종종 yoyo와 같이 쓰이기도 함
+    </script>
+</body>
+</html>

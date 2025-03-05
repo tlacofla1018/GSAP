@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 5일차 - Easing</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            background-color: #008000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box none">none(linear)</div>
+
+    <div class="box power1_01">power1.in</div>
+    <div class="box power1_02">power1.inOut</div>
+    <div class="box power1_03">power1.out</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+        gsap.to(".none", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'none'
+        });
+
+        gsap.to(".power1_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power1.in'
+        });
+        gsap.to(".power1_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power1.inOut'
+        });
+        gsap.to(".power1_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power1.out'
+        });
+    </script>
+</body>
+</html>
