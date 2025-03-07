@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 6일차 - Easing</title>
+    <style>
+        ul, ol, dl {
+            list-style: none;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            height: 100vh;
+        }
+        li {
+            display: flex;
+            gap: 200px;
+        }
+
+        .box {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            background-color: #008000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box power2_01">power2.in</div>
+            <div class="box power2_02">power2.inOut</div>
+            <div class="box power2_03">power2.out</div>
+        </li>
+        <li>
+            <div class="box power3_01">power3.in</div>
+            <div class="box power3_02">power3.inOut</div>
+            <div class="box power3_03">power3.out</div>
+        </li>
+        <li>
+            <div class="box power4_01">power4.in</div>
+            <div class="box power4_02">power4.inOut</div>
+            <div class="box power4_03">power4.out</div>
+        </li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+        gsap.to(".power2_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power2.in'
+        });
+        gsap.to(".power2_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power2.inOut'
+        });
+        gsap.to(".power2_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power2.out'
+        });
+
+        gsap.to(".power3_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power3.in'
+        });
+        gsap.to(".power3_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power3.inOut'
+        });
+        gsap.to(".power3_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power3.out'
+        });
+
+        gsap.to(".power4_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power4.in'
+        });
+        gsap.to(".power4_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power4.inOut'
+        });
+        gsap.to(".power4_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'power4.out'
+        });
+    </script>
+</body>
+</html>

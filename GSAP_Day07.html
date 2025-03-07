@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 7일차 - Easing</title>
+    <style>
+        ul, ol, dl {
+            list-style: none;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            height: 100vh;
+        }
+        li {
+            display: flex;
+            gap: 200px;
+        }
+
+        .box {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            background-color: #008000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box back_01">back.in</div>
+            <div class="box back_02">back.inOut</div>
+            <div class="box back_03">back.out</div>
+        </li>
+        <li>
+            <div class="box bounce_01">bounce.in</div>
+            <div class="box bounce_02">bounce.inOut</div>
+            <div class="box bounce_03">bounce.out</div>
+        </li>
+        <li>
+            <div class="box circ_01">circ.in</div>
+            <div class="box circ_02">circ.inOut</div>
+            <div class="box circ_03">circ.out</div>
+        </li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+        gsap.to(".back_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'back.in(1)'
+        });
+        gsap.to(".back_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'back.inOut(1.7)'
+        });
+        gsap.to(".back_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'back.out(4)'
+        });
+
+        gsap.to(".bounce_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'bounce.in'
+        });
+        gsap.to(".bounce_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'bounce.inOut'
+        });
+        gsap.to(".bounce_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'bounce.out'
+        });
+
+        gsap.to(".circ_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'circ.in'
+        });
+        gsap.to(".circ_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'circ.inOut'
+        });
+        gsap.to(".circ_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'circ.out'
+        });
+    </script>
+</body>
+</html>
