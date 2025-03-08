@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[GSAP] 8일차 - Easing</title>
+    <style>
+        ul, ol, dl {
+            list-style: none;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            height: 100vh;
+        }
+        li {
+            display: flex;
+            gap: 200px;
+        }
+
+        .box {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            background-color: #008000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box elastic_01">elastic.in</div>
+            <div class="box elastic_02">elastic.inOut</div>
+            <div class="box elastic_03">elastic.out</div>
+        </li>
+        <li>
+            <div class="box expo_01">expo.in</div>
+            <div class="box expo_02">expo.inOut</div>
+            <div class="box expo_03">expo.out</div>
+        </li>
+        <li>
+            <div class="box sine_01">sine.in</div>
+            <div class="box sine_02">sine.inOut</div>
+            <div class="box sine_03">sine.out</div>
+        </li>
+        <li>
+            <div class="box steps_01">steps(2)</div>
+            <div class="box steps_02">steps(6)</div>
+            <div class="box steps_03">steps(12)</div>
+        </li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script>
+        gsap.to(".elastic_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'elastic.in(1,0.3)'
+        });
+        gsap.to(".elastic_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'elastic.inOut(1,0.3)'
+        });
+        gsap.to(".elastic_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'elastic.out(1,0.3)'
+        });
+
+        gsap.to(".expo_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'expo.in'
+        });
+        gsap.to(".expo_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'expo.inOut'
+        });
+        gsap.to(".expo_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'expo.out'
+        });
+
+        gsap.to(".sine_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'sine.in'
+        });
+        gsap.to(".sine_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'sine.inOut'
+        });
+        gsap.to(".sine_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'sine.out'
+        });
+
+        gsap.to(".steps_01", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'steps(2)'
+        });
+        gsap.to(".steps_02", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'steps(6)'
+        });
+        gsap.to(".steps_03", { 
+            rotation: 360,
+            backgroundColor: '#000080',
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'steps(12)'
+        });
+    </script>
+</body>
+</html>
